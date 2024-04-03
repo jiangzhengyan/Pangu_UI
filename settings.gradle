@@ -1,0 +1,3 @@
+include ':pangu_ui_lib'
+include ':app'
+rootProject.name = "Pangu_UI"

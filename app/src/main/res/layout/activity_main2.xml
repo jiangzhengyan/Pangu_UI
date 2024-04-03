@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="18dp"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <com.smart.pangu_ui_lib.widget.PanguInputView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pgiv_show_title="visiable"
+        app:pgiv_hint="请输入内容"
+        app:pgiv_border="true"
+        app:pgiv_icon_right="@mipmap/ic_arrow_right"
+        app:pgiv_title_text_style="normal"
+        app:pgiv_show_line="false"
+
+        app:pgiv_title="我的标题" />
+
+</RelativeLayout>

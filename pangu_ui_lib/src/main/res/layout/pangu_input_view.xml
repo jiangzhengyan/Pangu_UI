@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_must"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/red_color"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="6"
+                android:minEms="4"
+                android:maxLines="2"
+                android:text="执法部门"
+                android:textColor="@color/main_subtitle_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="6dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_form"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/ed_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_right"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请填写内容"
+                    android:minHeight="40dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="6dp"
+                    android:textColorHint="#C9CDD4"
+                    android:text=""
+                    android:textColor="#30353D"
+                    android:textColorHighlight="@color/blue_text_color"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    style="@style/style_right_icon"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivRB"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_camera"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/gray_horizontal_line_view" />
+</LinearLayout>

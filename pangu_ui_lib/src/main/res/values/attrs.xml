@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="androidWheelView">
+        <attr name="awv_textsize" format="integer" />
+        <attr name="awv_lineSpace" format="float" />
+        <attr name="awv_centerTextColor" format="integer" />
+        <attr name="awv_outerTextColor" format="integer" />
+        <attr name="awv_dividerTextColor" format="integer" />
+        <attr name="awv_itemsVisibleCount" format="integer" />
+        <attr name="awv_isLoop" format="boolean" />
+        <attr name="awv_initialPosition" format="integer" />
+        <attr name="awv_scaleX" format="float" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="indicator">
+            <flag name="BallPulse" value="0" />
+            <flag name="BallGridPulse" value="1" />
+            <flag name="BallClipRotate" value="2" />
+            <flag name="BallClipRotatePulse" value="3" />
+            <flag name="SquareSpin" value="4" />
+            <flag name="BallClipRotateMultiple" value="5" />
+            <flag name="BallPulseRise" value="6" />
+            <flag name="BallRotate" value="7" />
+            <flag name="CubeTransition" value="8" />
+            <flag name="BallZigZag" value="9" />
+            <flag name="BallZigZagDeflect" value="10" />
+            <flag name="BallTrianglePath" value="11" />
+            <flag name="BallScale" value="12" />
+            <flag name="LineScale" value="13" />
+            <flag name="LineScaleParty" value="14" />
+            <flag name="BallScaleMultiple" value="15" />
+            <flag name="BallPulseSync" value="16" />
+            <flag name="BallBeat" value="17" />
+            <flag name="LineScalePulseOut" value="18" />
+            <flag name="LineScalePulseOutRapid" value="19" />
+            <flag name="BallScaleRipple" value="20" />
+            <flag name="BallScaleRippleMultiple" value="21" />
+            <flag name="BallSpinFadeLoader" value="22" />
+            <flag name="LineSpinFadeLoader" value="23" />
+            <flag name="TriangleSkewSpin" value="24" />
+            <flag name="Pacman" value="25" />
+            <flag name="BallGridBeat" value="26" />
+            <flag name="SemiCircleSpin" value="27" />
+        </attr>
+        <attr name="indicator_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MyRadioButton">
+        <attr name="rb_width" format="dimension" />
+        <attr name="rb_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MyRatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--Tablayout定义资源-->
+    <attr name="MarkTabStyle" format="reference" />
+    <declare-styleable name="MarkTabLayout">
+        <!--下划线颜色-->
+        <attr name="fTabIndicatorColor" format="color" />
+        <!--下划线高度-->
+        <attr name="fTabIndicatorHeight" format="dimension" />
+        <attr name="fTabContentStart" format="dimension" />
+        <attr name="fTabBackground" format="reference" />
+        <attr name="fTabIndicator" format="reference" />
+        <attr name="fTabIndicatorGravity">
+            <enum name="bottom" value="0" />
+            <enum name="center" value="1" />
+            <enum name="top" value="2" />
+            <enum name="stretch" value="3" />
+        </attr>
+        <attr name="fTabIndicatorAnimationDuration" format="integer" />
+        <!--下画线宽度是否填满单元布局  ture填满  false默认与-->
+        <attr name="fTabIndicatorFullWidth" format="boolean" />
+        <!--下划线宽度-->
+        <attr name="fTabIndicatorFixedWidth" format="dimension" />
+        <!--类型 滚动或填充-->
+        <attr name="fTabMode">
+            <enum name="scrollable" value="0" />
+            <enum name="fixed" value="1" />
+        </attr>
+        <attr name="fTabGravity">
+            <enum name="fill" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <attr name="fTabInlineLabel" format="boolean" />
+        <attr name="fTabMinWidth" format="dimension" />
+        <attr name="fTabMaxWidth" format="dimension" />
+        <attr name="fTabTextAppearance" format="reference" />
+        <!--字体正常颜色-->
+        <attr name="fTabTextColor" format="color" />
+        <!--字体选中颜色-->
+        <attr name="fTabSelectedTextColor" format="color" />
+        <attr name="fTabPaddingStart" format="dimension" />
+        <attr name="fTabPaddingTop" format="dimension" />
+        <attr name="fTabPaddingEnd" format="dimension" />
+        <attr name="fTabPaddingBottom" format="dimension" />
+        <attr name="fTabPadding" format="dimension" />
+        <attr name="fTabIconTint" format="color" />
+        <attr name="fTabIconTintMode">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="fTabRippleColor" format="color" />
+        <attr name="fTabUnboundedRipple" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MarkTabItem">
+        <attr name="android:text" />
+        <attr name="android:icon" />
+        <attr name="android:layout" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTopTitle">
+        <attr name="title" format="string" />
+        <attr name="title_size" format="dimension" />
+        <attr name="right_menu" format="string" />
+        <attr name="right_icon" format="reference" />
+        <attr name="title_bold" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ContactItemView">
+        <attr name="contactItemImage" format="reference" />
+        <attr name="contactItemName" format="string" />
+    </declare-styleable>
+
+    <!--自定义导航栏-->
+    <declare-styleable name="CustomNavBar">
+        <attr name="title_mid" format="string" />
+        <attr name="title_mid_color" format="color" />
+        <attr name="title_left" format="string" />
+        <attr name="title_right" format="string" />
+        <attr name="icon_left" format="reference" />
+        <attr name="icon_right" format="reference" />
+        <attr name="title_bg" format="reference|color" />
+        <attr name="left_icon_show" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomImageLayout">
+        <attr name="cilimage_show_note" format="boolean" />
+    </declare-styleable>
+
+    <!--    WheelView-->
+    <declare-styleable name="pickerview">
+        <attr name="wheelview_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="wheelview_textSize" format="dimension" />
+        <attr name="wheelview_textColorOut" format="color" />
+        <attr name="wheelview_textColorCenter" format="color" />
+        <attr name="wheelview_dividerColor" format="color" />
+        <attr name="wheelview_dividerWidth" format="dimension" />
+        <attr name="wheelview_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+
+
+    <!--自定设置中的item-->
+    <declare-styleable name="CustomSettingItemView">
+        <attr name="item_left_icon" format="reference" />
+        <attr name="item_right_icon" format="reference" />
+        <attr name="item_left_text" format="string" />
+        <attr name="item_right_text" format="string" />
+        <attr name="item_show_left_icon">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="item_leftTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="item_left_text_size" format="dimension" />
+        <attr name="item_left_padding" format="dimension" />
+
+    </declare-styleable>
+    <!--气泡弹框-->
+    <declare-styleable name="bubble">
+        <attr name="shadowColor_" format="color" />
+        <attr name="padding_" format="dimension" />
+        <attr name="strokeWidth_" format="float" />
+        <attr name="cornerRadius_" format="float" />
+        <attr name="halfBaseOfLeg_" format="dimension" />
+    </declare-styleable>
+    <!--    检查笔录底部提示-->
+    <declare-styleable name="BiluTipsView">
+        <attr name="BiluTipsContent" format="string" />
+    </declare-styleable>
+    <!--自定义输入-->
+    <declare-styleable name="PanguInputView">
+        <attr name="pgiv_title_size" format="dimension" />
+        <attr name="pgiv_title_text_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="pgiv_title" format="string" />
+        <attr name="pgiv_hint" format="string" />
+        <attr name="pgiv_border" format="boolean" />
+        <attr name="pgiv_show_line" format="boolean" />
+        <attr name="pgiv_title_color" format="color" />
+        <attr name="pgiv_enable" format="boolean" />
+        <attr name="pgiv_must" format="boolean" />
+        <attr name="pgiv_icon_right" format="reference" />
+        <attr name="pgiv_icon_rb" format="reference" />
+        <attr name="pgiv_icon_title_r" format="reference" />
+        <attr name="pgiv_show_title">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="pgiv_input_height" format="dimension" />
+        <attr name="pgiv_input_minheight" format="dimension" />
+        <attr name="pgiv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="pgiv_title_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="pgiv_title_layout_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="pgiv_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="pgiv_maxLength" format="integer" min="0" />
+
+        <!-- The type of data being placed in a text field, used to help an
+             input method decide how to let the user enter text.  The constants
+             here correspond to those defined by
+             {@link android.text.InputType}.  Generally you can select
+             a single value, though some can be combined together as
+             indicated.  Setting this attribute to anything besides
+             <var>none</var> also implies that the text is editable. -->
+        <attr name="pgiv_inputType">
+            <!-- There is no content type.  The text is not editable. -->
+            <flag name="none" value="0x00000000" />
+            <!-- Just plain old text.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_NORMAL}. -->
+            <flag name="text" value="0x00000001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request capitalization of all characters.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_CHARACTERS}. -->
+            <flag name="textCapCharacters" value="0x00001001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request capitalization of the first character of every word.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_WORDS}. -->
+            <flag name="textCapWords" value="0x00002001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request capitalization of the first character of every sentence.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_SENTENCES}. -->
+            <flag name="textCapSentences" value="0x00004001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request auto-correction of text being input.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_AUTO_CORRECT}. -->
+            <flag name="textAutoCorrect" value="0x00008001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 specify that this field will be doing its own auto-completion and
+                 talking with the input method appropriately.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_AUTO_COMPLETE}. -->
+            <flag name="textAutoComplete" value="0x00010001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 allow multiple lines of text in the field.  If this flag is not set,
+                 the text field will be constrained to a single line.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_MULTI_LINE}. -->
+            <flag name="textMultiLine" value="0x00020001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 indicate that though the regular text view should not be multiple
+                 lines, the IME should provide multiple lines if it can.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_IME_MULTI_LINE}. -->
+            <flag name="textImeMultiLine" value="0x00040001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 indicate that the IME should not show any
+                 dictionary-based word suggestions.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_NO_SUGGESTIONS}. -->
+            <flag name="textNoSuggestions" value="0x00080001" />
+            <!-- Text that will be used as a URI.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_URI}. -->
+            <flag name="textUri" value="0x00000011" />
+            <!-- Text that will be used as an e-mail address.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_EMAIL_ADDRESS}. -->
+            <flag name="textEmailAddress" value="0x00000021" />
+            <!-- Text that is being supplied as the subject of an e-mail.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_EMAIL_SUBJECT}. -->
+            <flag name="textEmailSubject" value="0x00000031" />
+            <!-- Text that is the content of a short message.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_SHORT_MESSAGE}. -->
+            <flag name="textShortMessage" value="0x00000041" />
+            <!-- Text that is the content of a long message.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_LONG_MESSAGE}. -->
+            <flag name="textLongMessage" value="0x00000051" />
+            <!-- Text that is the name of a person.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_PERSON_NAME}. -->
+            <flag name="textPersonName" value="0x00000061" />
+            <!-- Text that is being supplied as a postal mailing address.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_POSTAL_ADDRESS}. -->
+            <flag name="textPostalAddress" value="0x00000071" />
+            <!-- Text that is a password.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_PASSWORD}. -->
+            <flag name="textPassword" value="0x00000081" />
+            <!-- Text that is a password that should be visible.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_VISIBLE_PASSWORD}. -->
+            <flag name="textVisiblePassword" value="0x00000091" />
+            <!-- Text that is being supplied as text in a web form.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_EDIT_TEXT}. -->
+            <flag name="textWebEditText" value="0x000000a1" />
+            <!-- Text that is filtering some other data.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_FILTER}. -->
+            <flag name="textFilter" value="0x000000b1" />
+            <!-- Text that is for phonetic pronunciation, such as a phonetic name
+                 field in a contact entry.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_PHONETIC}. -->
+            <flag name="textPhonetic" value="0x000000c1" />
+            <!-- Text that will be used as an e-mail address on a web form.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_EMAIL_ADDRESS}. -->
+            <flag name="textWebEmailAddress" value="0x000000d1" />
+            <!-- Text that will be used as a password on a web form.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_PASSWORD}. -->
+            <flag name="textWebPassword" value="0x000000e1" />
+            <!-- A numeric only field.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+                 {@link android.text.InputType#TYPE_NUMBER_VARIATION_NORMAL}. -->
+            <flag name="number" value="0x00000002" />
+            <!-- Can be combined with <var>number</var> and its other options to
+                 allow a signed number.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+                 {@link android.text.InputType#TYPE_NUMBER_FLAG_SIGNED}. -->
+            <flag name="numberSigned" value="0x00001002" />
+            <!-- Can be combined with <var>number</var> and its other options to
+                 allow a decimal (fractional) number.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+                 {@link android.text.InputType#TYPE_NUMBER_FLAG_DECIMAL}. -->
+            <flag name="numberDecimal" value="0x00002002" />
+            <!-- A numeric password field.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+                 {@link android.text.InputType#TYPE_NUMBER_VARIATION_PASSWORD}. -->
+            <flag name="numberPassword" value="0x00000012" />
+            <!-- For entering a phone number.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_PHONE}. -->
+            <flag name="phone" value="0x00000003" />
+            <!-- For entering a date and time.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+                 {@link android.text.InputType#TYPE_DATETIME_VARIATION_NORMAL}. -->
+            <flag name="datetime" value="0x00000004" />
+            <!-- For entering a date.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+                 {@link android.text.InputType#TYPE_DATETIME_VARIATION_DATE}. -->
+            <flag name="date" value="0x00000014" />
+            <!-- For entering a time.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+                 {@link android.text.InputType#TYPE_DATETIME_VARIATION_TIME}. -->
+            <flag name="time" value="0x00000024" />
+        </attr>
+    </declare-styleable>
+    <!--自定义选择-->
+    <declare-styleable name="CustomSelectView">
+        <attr name="csv_title_size" format="dimension" />
+        <attr name="csv_title" format="string" />
+        <attr name="csv_hint" format="string" />
+        <attr name="csv_enable" format="boolean" />
+        <attr name="csv_must" format="boolean" />
+        <attr name="csv_border" format="boolean" />
+        <attr name="csv_show_line" format="boolean" />
+        <attr name="csv_show_icon_right" format="boolean" />
+        <attr name="csv_icon_right" format="reference" />
+        <attr name="csv_title_color" format="color" />
+        <!--        是否是多选-->
+        <attr name="csv_multi_select" format="boolean" />
+
+        <attr name="csv_show_title">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="csv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="csv_title_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+    <!--    自定义flexbox-->
+    <declare-styleable name="MyFlexBoxView">
+        <attr name="flex_direction">
+            <enum name="row" value="0" />
+            <enum name="row_reverse" value="1" />
+            <enum name="column" value="2" />
+            <enum name="column_reverse" value="3" />
+        </attr>
+        <attr name="flex_enable" format="boolean" />
+        <attr name="flex_wrap">
+            <enum name="nowrap" value="0" />
+            <enum name="wrap" value="1" />
+            <enum name="wrap_reverse" value="2" />
+        </attr>
+        <attr name="flex_item_margin" format="dimension" />
+        <attr name="flex_select_mode">
+            <!--单选-->
+            <enum name="single" value="0" />
+            <!--多选-->
+            <enum name="multiple" value="1" />
+            <!--最多选择一个-->
+            <enum name="oneMost" value="2" />
+            <!--至少选择一个-->
+            <enum name="oneLeast" value="3" />
+        </attr>
+        <attr name="flex_item_text_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+    <!--    自定义formitemview-->
+    <declare-styleable name="FormItemView">
+        <attr name="fiv_must" format="boolean" />
+        <attr name="fiv_title_color" format="color" />
+        <attr name="fiv_title" format="string" />
+        <attr name="fiv_show_title">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="fiv_title_size" format="dimension" />
+        <attr name="fiv_title_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="fiv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="fiv_show_line">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="fiv_title_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="fiv_content_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="FormItemDetailView">
+        <attr name="fidv_title_color" format="color" />
+        <attr name="fidv_right_icon" format="reference" />
+        <attr name="fidv_title_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="fidv_title_size" format="dimension" />
+
+        <attr name="fidv_content_color" format="color" />
+        <attr name="fidv_content_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="fidv_content_size" format="dimension" />
+
+
+        <attr name="fidv_title" format="string" />
+        <attr name="fidv_content" format="string" />
+        <attr name="fidv_must" format="boolean" />
+        <attr name="fidv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="fidv_show_line">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="fidv_title_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="fidv_content_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MultiFormItemDetailView">
+        <attr name="mutilfidv_title_color" format="color" />
+        <attr name="mutilfidv_title_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="mutilfidv_title_size" format="dimension" />
+
+        <attr name="mutilfidv_content_color" format="color" />
+        <attr name="mutilfidv_content_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="mutilfidv_content_size" format="dimension" />
+
+
+        <attr name="mutilfidv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="mutilfidv_show_line">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="mutilfidv_title_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="mutilfidv_content_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="DetailSignItemlView">
+        <attr name="dsiv_title" format="string" />
+
+    </declare-styleable>
+    <!--    下划线EditText-->
+    <declare-styleable name="LinedEditText">
+        <attr name="LinedEt_line_height" format="dimension" />
+        <attr name="LinedEt_line_color" format="color" />
+        <attr name="LinedEt_line_margin_top" format="dimension" />
+
+    </declare-styleable>
+    <!--    选择日期控件-->
+    <declare-styleable name="CustomSelectDateView">
+        <attr name="csdate_select_mode">
+            <!--            年-->
+            <enum name="yyyy" value="0" />
+            <!--            年月日-->
+            <enum name="yyyy_MM_dd" value="1" />
+            <!--            年月日时分-->
+            <enum name="yyyy_MM_dd_HH_mm" value="2" />
+            <!--            月日-->
+            <enum name="MM_dd" value="3" />
+        </attr>
+        <attr name="csdate_show_mode">
+            <!--显示一个日期-->
+            <enum name="singleDate" value="1" />
+            <!--显示两个日期-->
+            <enum name="doubleDate" value="2" />
+        </attr>
+        <attr name="csdate_title" format="string" />
+        <attr name="csdate_hint_start" format="string" />
+        <attr name="csdate_hint_end" format="string" />
+        <attr name="csdate_enable" format="boolean" />
+        <attr name="csdate_must" format="boolean" />
+        <attr name="csdate_border" format="boolean" />
+        <attr name="csdate_title_color" format="color" />
+
+        <attr name="csdate_show_title">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!--    自定义表达展示标题必填非必填-->
+    <declare-styleable name="CustomFormTitle">
+        <attr name="cft_title_size" format="dimension" />
+        <attr name="cft_title_color" format="color" />
+
+
+        <attr name="cft_title_text_style">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="cft_title" format="string" />
+        <attr name="cft_padding_start" format="dimension" />
+        <attr name="cft_right_title" format="string" />
+        <attr name="cft_must" format="boolean" />
+        <attr name="cft_show_line" format="boolean" />
+        <attr name="cft_background" format="reference|color" />
+        <attr name="cft_show_right_title">
+            <enum name="visiable" value="0" />
+            <enum name="invisiable" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="cft_icon_right" format="reference" />
+        <attr name="cft_mid_title" format="string" />
+        <attr name="cft_mid_textColor" format="reference|color" />
+
+    </declare-styleable>
+
+    <!--    自定义三种状态checkbox-->
+    <declare-styleable name="ThreeStateCheckBox">
+
+        <attr name="tsc_checke_state">
+            <enum name="unchecked" value="0" />
+            <enum name="checked" value="1" />
+            <enum name="midchecked" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomListHead">
+        <attr name="head_title" format="string" />
+        <attr name="head_tag" format="string" />
+        <attr name="head_show_right_icon" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomSortView">
+        <attr name="sort_name" format="string" />
+        <attr name="sort_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PieChartView">
+        <attr name="circleRadius" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRadioButton">
+        <attr name="checked" format="boolean" />
+        <attr name="active_icon" format="reference" />
+        <attr name="inactive_icon" format="reference" />
+        <attr name="text" format="string" />
+        <attr name="radio_msg" format="string" />
+        <attr name="icon_size" format="dimension" />
+    </declare-styleable>
+</resources>
