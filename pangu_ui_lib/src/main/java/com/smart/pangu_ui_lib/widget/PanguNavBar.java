@@ -20,7 +20,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 
 /**
- *  本类的主要功能是 :   导航栏
+ *  本类的主要功能是 :   导航栏|标题栏
  *
  * @author  jiangzhengyan  2024/4/9 15:43
  *
