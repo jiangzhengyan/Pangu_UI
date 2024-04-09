@@ -508,12 +508,6 @@ public class PanguInputView extends BaseView {
     }
 
 
-    //设置搜索条件名称和输入提示
-    public void setData(String inputTitle, String hint) {
-        mTvName.setText(inputTitle);
-        mEdContent.setHint(hint);
-    }
-
     /**
      * 设置内容
      *
@@ -591,7 +585,7 @@ public class PanguInputView extends BaseView {
         }
     }
 
-    public EditText getmEdContent() {
+    public EditText getEditText() {
         return mEdContent;
     }
 }
