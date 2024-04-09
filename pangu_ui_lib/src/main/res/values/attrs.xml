@@ -165,6 +165,7 @@
         <attr name="pangu_icon_right_2" format="reference" />
         <attr name="pangu_title_bg" format="reference|color" />
         <attr name="pangu_left_icon_show" format="boolean" />
+        <attr name="pangu_nav_show_line" format="boolean" />
     </declare-styleable>
     <declare-styleable name="CustomImageLayout">
         <attr name="cilimage_show_note" format="boolean" />

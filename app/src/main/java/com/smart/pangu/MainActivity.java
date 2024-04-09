@@ -1,31 +1,53 @@
 package com.smart.pangu;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.smart.pangu.activity.PanguInputViewActivity;
+import com.smart.pangu.activity.PanguNavActivity;
+import com.smart.pangu.base.BaseActivity;
+import com.smart.pangu_ui_lib.widget.PanguNavBar;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
 
-    @Bind(R.id.btn_pangu_input_view)
-    Button mBtnPanguInputView;
+    @Bind(R.id.btn1)
+    Button mBtn1;
+    @Bind(R.id.btn2)
+    Button mBtn2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        ButterKnife.bind(this);
+    protected int getContentViewId() {
+        return R.layout.activity_main2;
+    }
+
+    @Override
+    protected void initView(Bundle savedInstanceState) {
 
     }
 
+    @Override
+    protected void loadData() {
 
-    @OnClick(R.id.btn_pangu_input_view)
-    public void onViewClicked() {
-        PanguInputViewActivity.start(this);
+    }
+
+    @OnClick({R.id.btn1, R.id.btn2})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn1:
+                //盘古输入框
+                PanguInputViewActivity.start(this);
+                break;
+            case R.id.btn2:
+                //盘导航栏
+                PanguNavActivity.start(this);
+                break;
+        }
     }
 }

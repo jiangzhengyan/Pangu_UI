@@ -2,6 +2,7 @@ package com.smart.pangu_ui_lib.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -20,10 +21,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 
 /**
- *  本类的主要功能是 :   导航栏|标题栏
+ * 本类的主要功能是 :   导航栏|标题栏
  *
- * @author  jiangzhengyan  2024/4/9 15:43
- *
+ * @author jiangzhengyan  2024/4/9 15:43
  */
 public class PanguNavBar extends BaseView {
 
@@ -35,6 +35,7 @@ public class PanguNavBar extends BaseView {
     private TextView mTvRight;
     private ConstraintLayout mClNavBar;
     private ImageView mIvRight2;
+    private View mLine;
 
 
     private String title_mid;
@@ -44,6 +45,10 @@ public class PanguNavBar extends BaseView {
     private int iconRight;
     private int iconRight2;
     private Drawable title_bg;
+    private int title_mid_color;
+    private boolean showLine;
+    private boolean leftIconShow;
+
 
     @Override
     protected int getLayoutId() {
@@ -61,20 +66,28 @@ public class PanguNavBar extends BaseView {
     public PanguNavBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PanguNavBar, defStyleAttr, 0);
+
         // 中间标题
         title_mid = typedArray.getString(R.styleable.PanguNavBar_pangu_title_mid);
+        //中间标题的颜色
+        title_mid_color = typedArray.getInteger(R.styleable.PanguNavBar_pangu_title_mid_color, Color.parseColor("#FF000000"));
         // 左标题
         title_left = typedArray.getString(R.styleable.PanguNavBar_pangu_title_left);
         // 右标题
         title_right = typedArray.getString(R.styleable.PanguNavBar_pangu_title_right);
-//        showBg = typedArray.getBoolean(R.styleable.custom_nav_bar_show_bg, true);
+        //是否展示下横线
+        showLine = typedArray.getBoolean(R.styleable.PanguNavBar_pangu_nav_show_line, false);
         // 左图标
         iconLeft = typedArray.getResourceId(R.styleable.PanguNavBar_pangu_icon_left, 0);
-        // 右图标
+        // 右图标1
         iconRight = typedArray.getResourceId(R.styleable.PanguNavBar_pangu_icon_right, 0);
         // 右图标2
         iconRight2 = typedArray.getResourceId(R.styleable.PanguNavBar_pangu_icon_right_2, 0);
+        //设置背景
         title_bg = typedArray.getDrawable(R.styleable.PanguNavBar_pangu_title_bg);
+        //是否展示左图标
+        leftIconShow = typedArray.getBoolean(R.styleable.PanguNavBar_pangu_left_icon_show, true);
+
         typedArray.recycle();
         initView();
     }
@@ -88,19 +101,46 @@ public class PanguNavBar extends BaseView {
         mTvRight = findViewById(R.id.tv_right);
         mClNavBar = findViewById(R.id.cl_nav_bar);
         mIvRight2 = findViewById(R.id.iv_right_2);
+        mLine = findViewById(R.id.line);
 
 
         setMidTitle(title_mid);
+        setMidTitleColor(title_mid_color);
         setLeftTitle(title_left);
         setLeftIcon(iconLeft);
         setRightTitle(title_right);
         setRightIcon(iconRight);
         setRightIcon2(iconRight2);
-
         setBgDrawable(title_bg);
+        setShowLine(showLine);
+        setLeftIconShow(leftIconShow);
     }
 
-    private void setBgDrawable(Drawable title_bg) {
+    /**
+     * 是否展示左侧图标
+     *
+     * @param leftIconShow -
+     */
+    public void setLeftIconShow(boolean leftIconShow) {
+        mIvLeft.setVisibility(leftIconShow ? VISIBLE : GONE);
+    }
+
+    /**
+     * 是否展示下横线
+     *
+     * @param showLine -
+     */
+    public void setShowLine(boolean showLine) {
+        mLine.setVisibility(showLine ? VISIBLE : GONE);
+    }
+
+    public void setMidTitleColor(int title_mid_color) {
+        if (mTvMid != null) {
+            mTvMid.setTextColor(title_mid_color);
+        }
+    }
+
+    public void setBgDrawable(Drawable title_bg) {
         if (title_bg == null) {
             return;
         }
@@ -141,46 +181,30 @@ public class PanguNavBar extends BaseView {
         }
     }
 
-//    public void setEnableBackground(boolean enable) {
-//        mParent.setBackgroundColor(enable ? Color.parseColor("#D01816") : Color.TRANSPARENT);
-//        mStatusBar.setBackgroundColor(enable ? Color.parseColor("#D01816") : Color.TRANSPARENT);
-//        mBack.setImageResource(enable ? R.mipmap.icon_back_white : R.mipmap.icon_back_gray);
-//        mTitle.setTextColor(enable ? Color.parseColor("#FFFFFF") : Color.parseColor("#333333"));
-//    }
-
-    /**
-     * 隐藏返回按钮
-     */
-    public void leftIconGone() {
-        if (mIvLeft != null) {
-            mIvLeft.setVisibility(View.GONE);
-        }
-    }
-
     /**
      * 显示返回按钮
      */
-    public void leftIconVisi() {
+    public void leftIconVisi(int visibility) {
         if (mIvLeft != null) {
-            mIvLeft.setVisibility(View.VISIBLE);
+            mIvLeft.setVisibility(visibility);
         }
     }
 
     /**
      * 隐藏右侧图标
      */
-    public void rightIconGone() {
+    public void rightIconVisi(int visibility) {
         if (mIvRight != null) {
-            mIvRight.setVisibility(View.GONE);
+            mIvRight.setVisibility(visibility);
         }
     }
 
     /**
      * 隐藏右侧文字title
      */
-    public void rightTitleGone() {
+    public void rightTitleVisi(int visibility) {
         if (mTvRight != null) {
-            mTvRight.setVisibility(View.GONE);
+            mTvRight.setVisibility(visibility);
         }
     }
 
@@ -188,44 +212,6 @@ public class PanguNavBar extends BaseView {
         return mIvRight2;
     }
 
-    /**
-     * 显示右侧图标
-     */
-    public void rightIconVisi() {
-        if (mIvRight != null) {
-            mIvRight.setVisibility(View.VISIBLE);
-        }
-    }
-
-    /**
-     * 显示右侧标题
-     */
-    public void rightTitleVisi() {
-        if (mTvRight != null) {
-            mTvRight.setVisibility(View.VISIBLE);
-        }
-    }
-
-
-    /**
-     * 设置状态栏背景颜色
-     *
-     * @param color
-     */
-//    public void setStatusBarBackground(@ColorInt int color) {
-//        if (mParent != null) {
-//            mParent.setBackgroundColor(color);
-//        }
-//    }
-
-    /**
-     * 设置标题背景颜色
-     */
-//    public void setNavBarBackground(@ColorInt int color) {
-//        if (mStatusBar != null) {
-//            mStatusBar.setBackgroundColor(color);
-//        }
-//    }
 
     // 设置主标题
     public void setMidTitle(String title) {

@@ -103,10 +103,16 @@
                 android:text="右标题"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:background="@color/gray_line_color" />
 
 </LinearLayout>

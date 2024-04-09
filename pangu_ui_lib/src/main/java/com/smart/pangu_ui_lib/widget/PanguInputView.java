@@ -28,9 +28,10 @@ import com.smart.pangu_ui_lib.util.PhoneHelper;
 import androidx.annotation.DrawableRes;
 
 /**
- * Created by jiang_zheng_yan
- * Date: 2020/4/24
- * Description:
+ *  本类的主要功能是 :   个性化输入框
+ *
+ * @author  jiangzhengyan  2024/4/9 19:06
+ *
  */
 public class PanguInputView extends BaseView {
 

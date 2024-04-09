@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.smart.pangu_ui_lib.widget.PanguNavBar
+        android:id="@+id/pg_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pangu_nav_show_line="true"
+        app:pangu_title_mid="盘古导航栏" />
+
+
+    <TextView
+        style="@style/style_sub_item"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:text="设置标题颜色,右侧图标和标题,点击事件" />
+
+    <com.smart.pangu_ui_lib.widget.PanguNavBar
+        android:id="@+id/pg_nav_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pangu_icon_right="@mipmap/ic_camera"
+        app:pangu_icon_right_2="@mipmap/icon_arrow_down"
+        app:pangu_nav_show_line="true"
+        app:pangu_title_mid="变色标题"
+        app:pangu_title_mid_color="@color/colorAccent"
+        app:pangu_title_right="右标题" />
+
+
+</LinearLayout>
