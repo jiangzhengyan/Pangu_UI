@@ -106,7 +106,7 @@ public class PanguInputView extends BaseView {
         iconRB = typedArray.getResourceId(R.styleable.PanguInputView_pgiv_icon_rb, 0);
 
         //是否显示标题
-        showTitle = typedArray.getInt(R.styleable.PanguInputView_pgiv_show_title, 0);
+        showTitle = typedArray.getInt(R.styleable.PanguInputView_pgiv_show_title, View.VISIBLE);
         //title的加粗
         titleTextStyle = typedArray.getInt(R.styleable.PanguInputView_pgiv_title_text_style, Typeface.BOLD);
 

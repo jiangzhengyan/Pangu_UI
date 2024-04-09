@@ -155,15 +155,16 @@
     </declare-styleable>
 
     <!--自定义导航栏-->
-    <declare-styleable name="CustomNavBar">
-        <attr name="title_mid" format="string" />
-        <attr name="title_mid_color" format="color" />
-        <attr name="title_left" format="string" />
-        <attr name="title_right" format="string" />
-        <attr name="icon_left" format="reference" />
-        <attr name="icon_right" format="reference" />
-        <attr name="title_bg" format="reference|color" />
-        <attr name="left_icon_show" format="boolean" />
+    <declare-styleable name="PanguNavBar">
+        <attr name="pangu_title_mid" format="string" />
+        <attr name="pangu_title_mid_color" format="color" />
+        <attr name="pangu_title_left" format="string" />
+        <attr name="pangu_title_right" format="string" />
+        <attr name="pangu_icon_left" format="reference" />
+        <attr name="pangu_icon_right" format="reference" />
+        <attr name="pangu_icon_right_2" format="reference" />
+        <attr name="pangu_title_bg" format="reference|color" />
+        <attr name="pangu_left_icon_show" format="boolean" />
     </declare-styleable>
     <declare-styleable name="CustomImageLayout">
         <attr name="cilimage_show_note" format="boolean" />
@@ -237,8 +238,8 @@
         <attr name="pgiv_icon_title_r" format="reference" />
         <attr name="pgiv_show_title">
             <enum name="visiable" value="0" />
-            <enum name="invisiable" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="invisiable" value="4" />
+            <enum name="gone" value="8" />
         </attr>
         <attr name="pgiv_input_height" format="dimension" />
         <attr name="pgiv_input_minheight" format="dimension" />

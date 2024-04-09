@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.smart.pangu_ui_lib.widget.PanguNavBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pangu_title_mid="盘古输入框" />
+
+    <View style="@style/gray_horizontal_line_view" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="1,标题在左的情况,必填,右侧图标(可点击)" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgiv_border="true"
+                app:pgiv_hint="请输入内容"
+                android:id="@+id/piv_1"
+                app:pgiv_must="true"
+                app:pgiv_icon_right="@mipmap/ic_arrow_right"
+                app:pgiv_show_line="false"
+                app:pgiv_show_title="visiable"
+                app:pgiv_title="标题在左"
+                app:pgiv_title_text_style="normal" />
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="2,标题在上的情况,无边框,有下划线,标题颜色" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgiv_border="false"
+                app:pgiv_hint="请输入内容"
+                app:pgiv_title_color="#FF5722"
+
+                app:pgiv_orientation="vertical"
+                app:pgiv_show_line="true"
+                app:pgiv_show_title="visiable"
+                app:pgiv_title="标题在上"
+                app:pgiv_title_text_style="normal" />
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="3,输入框高度,右下角图标(可点击)" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgiv_border="true"
+                app:pgiv_hint="请输入内容"
+                app:pgiv_gravity="start"
+                app:pgiv_input_minheight="120dp"
+                android:id="@+id/piv_3"
+                app:pgiv_orientation="vertical"
+                app:pgiv_show_line="false"
+                app:pgiv_icon_rb="@mipmap/ic_camera"
+                app:pgiv_show_title="visiable"
+                app:pgiv_title="标题在上"
+                app:pgiv_title_text_style="normal" />
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="4,不可用状态" />
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgiv_border="true"
+                app:pgiv_hint="请输入内容"
+                app:pgiv_enable="false"
+                app:pgiv_orientation="vertical"
+                app:pgiv_show_line="false"
+                app:pgiv_show_title="visiable"
+                app:pgiv_title="标题在上"
+                app:pgiv_title_text_style="normal" />
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="5,隐藏标题" />
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguInputView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgiv_border="true"
+                app:pgiv_hint="请输入内容"
+                app:pgiv_orientation="vertical"
+                app:pgiv_show_line="false"
+                app:pgiv_show_title="gone"
+                app:pgiv_title="标题在上"
+                app:pgiv_title_text_style="normal" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

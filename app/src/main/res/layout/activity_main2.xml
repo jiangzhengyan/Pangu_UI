@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:padding="18dp"
+    android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:padding="18dp">
 
-    <com.smart.pangu_ui_lib.widget.PanguInputView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:pgiv_show_title="visiable"
-        app:pgiv_hint="请输入内容"
-        app:pgiv_border="true"
-        app:pgiv_icon_right="@mipmap/ic_arrow_right"
-        app:pgiv_title_text_style="normal"
-        app:pgiv_show_line="false"
+        android:orientation="vertical">
 
-        app:pgiv_title="我的标题" />
+        <Button
+            android:id="@+id/btn_pangu_input_view"
+            style="@style/style_main_item"
+            android:layout_width="match_parent"
+            android:gravity="start|center_vertical"
+            android:text="盘古输入框"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <View style="@style/gray_horizontal_line_view" />
+
+    </LinearLayout>
+
+</LinearLayout>
