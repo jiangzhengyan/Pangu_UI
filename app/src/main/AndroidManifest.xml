@@ -27,6 +27,7 @@
         <activity android:name=".activity.PanguInputViewActivity"/>
         <activity android:name=".activity.PanguNavActivity"/>
         <activity android:name=".activity.PanguSelectViewActivity"/>
+        <activity android:name=".activity.PanguPopActivity"/>
     </application>
 
 </manifest>

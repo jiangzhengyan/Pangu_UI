@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
     android:padding="18dp">
-
 
 
     <LinearLayout
@@ -23,6 +21,7 @@
             android:textStyle="bold" />
 
         <View style="@style/gray_horizontal_line_view" />
+
         <Button
             android:id="@+id/btn2"
             style="@style/style_main_item"
@@ -32,6 +31,7 @@
             android:textStyle="bold" />
 
         <View style="@style/gray_horizontal_line_view" />
+
         <Button
             android:id="@+id/btn3"
             style="@style/style_main_item"
@@ -42,12 +42,23 @@
 
         <View style="@style/gray_horizontal_line_view" />
 
+        <Button
+            android:id="@+id/btn4"
+            style="@style/style_main_item"
+            android:layout_width="match_parent"
+            android:gravity="start|center_vertical"
+            android:text="盘古basePop弹窗"
+            android:textStyle="bold" />
+
+        <View style="@style/gray_horizontal_line_view" />
+
     </LinearLayout>
+
     <com.smart.pangu_ui_lib.widget.PanguFlexBoxView
         android:id="@+id/mflex_multi_select"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-      />
+        />
 
 </LinearLayout>

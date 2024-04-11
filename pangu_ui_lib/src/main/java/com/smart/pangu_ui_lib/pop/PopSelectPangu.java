@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smart.pangu_ui_lib.R;
-import com.smart.pangu_ui_lib.base.BasePop;
+import com.smart.pangu_ui_lib.base.PanguBasePop;
 import com.smart.pangu_ui_lib.entity.SelectItem;
 import com.smart.pangu_ui_lib.widget.wheelview.adapter.BaseWheelAdapter;
 import com.smart.pangu_ui_lib.widget.wheelview.listener.OnItemSelectedListener;
@@ -20,7 +20,7 @@ import java.util.List;
  *
  * @author jiangzhengyan  2024/4/10 9:49
  */
-public class PopSelect extends BasePop {
+public class PopSelectPangu extends PanguBasePop {
     private TextView mTvCancel;
     private TextView mTvSure;
     private WheelView mWvYear;
@@ -30,7 +30,7 @@ public class PopSelect extends BasePop {
     private SelectItem selectItem;
 
 
-    public PopSelect(Context context) {
+    public PopSelectPangu(Context context) {
         super(context);
     }
 

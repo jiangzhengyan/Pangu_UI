@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.smart.pangu_ui_lib.widget.PanguNavBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pangu_title_mid="盘古pop" />
+
+    <View style="@style/gray_horizontal_line_view" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_1"
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="1,弹窗-bottom-in-out" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+
+            <TextView
+                android:id="@+id/tv_2"
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="2,弹窗-top-in-out" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+
+            <TextView
+                android:id="@+id/tv_3"
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="3,弹窗-scale-in-out" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

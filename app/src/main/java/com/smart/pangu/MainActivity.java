@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import com.smart.pangu.activity.PanguInputViewActivity;
 import com.smart.pangu.activity.PanguNavActivity;
+import com.smart.pangu.activity.PanguPopActivity;
 import com.smart.pangu.activity.PanguSelectViewActivity;
 import com.smart.pangu.base.BaseActivity;
 import com.smart.pangu_ui_lib.widget.PanguNavBar;
@@ -38,7 +39,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -46,12 +47,16 @@ public class MainActivity extends BaseActivity {
                 PanguInputViewActivity.start(this);
                 break;
             case R.id.btn2:
-                //盘导航栏
+                //盘古导航栏
                 PanguNavActivity.start(this);
                 break;
             case R.id.btn3:
-                //盘选择栏
+                //盘古选择栏
                 PanguSelectViewActivity.start(this);
+                break;
+            case R.id.btn4:
+                //盘古basePop弹窗
+                PanguPopActivity.start(this);
                 break;
         }
     }

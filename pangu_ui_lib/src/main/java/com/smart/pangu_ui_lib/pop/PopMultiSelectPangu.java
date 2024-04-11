@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smart.pangu_ui_lib.R;
-import com.smart.pangu_ui_lib.base.BasePop;
+import com.smart.pangu_ui_lib.base.PanguBasePop;
 import com.smart.pangu_ui_lib.base.BaseRecyclerViewAdapter;
 import com.smart.pangu_ui_lib.entity.SelectItem;
 import com.smart.pangu_ui_lib.impl.OnItemClickRecyclerListener;
@@ -25,7 +25,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
  *
  * @author jiangzhengyan  2024/4/10 10:12
  */
-public class PopMultiSelect extends BasePop {
+public class PopMultiSelectPangu extends PanguBasePop {
 
 
     private TextView mTvCancel;
@@ -36,7 +36,7 @@ public class PopMultiSelect extends BasePop {
     private LinearLayout mLlPopRoot;
 
 
-    public PopMultiSelect(Context context) {
+    public PopMultiSelectPangu(Context context) {
         super(context);
     }
 
