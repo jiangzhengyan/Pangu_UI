@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.smart.pangu_ui_lib.widget.PanguNavBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pangu_title_mid="盘古选择框" />
+
+    <View style="@style/gray_horizontal_line_view" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="1,标题在左的情况,必填,单选 (可点击)" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguSelectView
+                android:id="@+id/psv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgsv_border="true"
+                app:pgsv_hint="请选择您的课程"
+                app:pgsv_must="true"
+                app:pgsv_show_line="false"
+                app:pgsv_show_title="visiable"
+                app:pgsv_title="标题在左" />
+
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="2,标题在上的情况,无边框,有下划线,标题颜色,多选" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguSelectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:id="@+id/psv_2"
+                app:pgsv_multi_select="true"
+                app:pgsv_border="false"
+                app:pgsv_hint="请选择您的课程"
+                app:pgsv_orientation="vertical"
+                app:pgsv_show_line="true"
+                app:pgsv_show_title="visiable"
+                app:pgsv_title="标题在上" />
+
+
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="3,不可用状态" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+
+            <com.smart.pangu_ui_lib.widget.PanguSelectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:pgsv_border="true"
+                app:pgsv_hint="请选择您的课程"
+                app:pgsv_must="true"
+                app:pgsv_title_color="@color/colorAccent"
+                app:pgsv_enable="false"
+                app:pgsv_orientation="vertical"
+                app:pgsv_show_line="false"
+                app:pgsv_show_title="visiable"
+                app:pgsv_title="标题在上" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

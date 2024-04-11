@@ -74,16 +74,8 @@ public class PanguInputView extends BaseView {
         return R.layout.pangu_input_view;
     }
 
-    public PanguInputView(Context context) {
-        this(context, null);
-    }
-
-    public PanguInputView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public PanguInputView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    @Override
+    protected void initView(Context context, AttributeSet attrs, int defStyleAttr) {
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PanguInputView, defStyleAttr, 0);
 
@@ -129,6 +121,14 @@ public class PanguInputView extends BaseView {
 
         typedArray.recycle();
         init();
+    }
+
+    public PanguInputView(Context context) {
+        super(context);
+    }
+
+    public PanguInputView(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     public void init() {

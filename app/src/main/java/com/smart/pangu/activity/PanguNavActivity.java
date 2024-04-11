@@ -9,7 +9,6 @@ import com.smart.pangu.base.BaseActivity;
 import com.smart.pangu_ui_lib.widget.PanguNavBar;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * 本类的主要功能是 :   盘古个性化标题栏|导航栏

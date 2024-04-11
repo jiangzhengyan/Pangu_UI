@@ -49,22 +49,21 @@ public class PanguNavBar extends BaseView {
     private boolean showLine;
     private boolean leftIconShow;
 
+    public PanguNavBar(Context context) {
+        super(context);
+    }
+
+    public PanguNavBar(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
 
     @Override
     protected int getLayoutId() {
         return R.layout.pangu_navi_bar;
     }
 
-    public PanguNavBar(Context context) {
-        this(context, null);
-    }
-
-    public PanguNavBar(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public PanguNavBar(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    @Override
+    protected void initView(Context context, AttributeSet attrs, int defStyleAttr) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PanguNavBar, defStyleAttr, 0);
 
         // 中间标题
@@ -87,12 +86,8 @@ public class PanguNavBar extends BaseView {
         title_bg = typedArray.getDrawable(R.styleable.PanguNavBar_pangu_title_bg);
         //是否展示左图标
         leftIconShow = typedArray.getBoolean(R.styleable.PanguNavBar_pangu_left_icon_show, true);
-
         typedArray.recycle();
-        initView();
-    }
 
-    private void initView() {
         mIvLeft = findViewById(R.id.iv_left);
         mTvLeft = findViewById(R.id.tv_left);
         mLlLeft = findViewById(R.id.ll_left);
@@ -102,7 +97,6 @@ public class PanguNavBar extends BaseView {
         mClNavBar = findViewById(R.id.cl_nav_bar);
         mIvRight2 = findViewById(R.id.iv_right_2);
         mLine = findViewById(R.id.line);
-
 
         setMidTitle(title_mid);
         setMidTitleColor(title_mid_color);
@@ -115,6 +109,7 @@ public class PanguNavBar extends BaseView {
         setShowLine(showLine);
         setLeftIconShow(leftIconShow);
     }
+
 
     /**
      * 是否展示左侧图标

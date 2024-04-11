@@ -236,7 +236,6 @@
         <attr name="pgiv_must" format="boolean" />
         <attr name="pgiv_icon_right" format="reference" />
         <attr name="pgiv_icon_rb" format="reference" />
-        <attr name="pgiv_icon_title_r" format="reference" />
         <attr name="pgiv_show_title">
             <enum name="visiable" value="0" />
             <enum name="invisiable" value="4" />
@@ -451,30 +450,30 @@
         </attr>
     </declare-styleable>
     <!--自定义选择-->
-    <declare-styleable name="CustomSelectView">
-        <attr name="csv_title_size" format="dimension" />
-        <attr name="csv_title" format="string" />
-        <attr name="csv_hint" format="string" />
-        <attr name="csv_enable" format="boolean" />
-        <attr name="csv_must" format="boolean" />
-        <attr name="csv_border" format="boolean" />
-        <attr name="csv_show_line" format="boolean" />
-        <attr name="csv_show_icon_right" format="boolean" />
-        <attr name="csv_icon_right" format="reference" />
-        <attr name="csv_title_color" format="color" />
+    <declare-styleable name="PanguSelectView">
+        <attr name="pgsv_title_size" format="dimension" />
+        <attr name="pgsv_title" format="string" />
+        <attr name="pgsv_hint" format="string" />
+        <attr name="pgsv_enable" format="boolean" />
+        <attr name="pgsv_must" format="boolean" />
+        <attr name="pgsv_border" format="boolean" />
+        <attr name="pgsv_show_line" format="boolean" />
+        <attr name="pgsv_show_icon_right" format="boolean" />
+        <attr name="pgsv_icon_right" format="reference" />
+        <attr name="pgsv_title_color" format="color" />
         <!--        是否是多选-->
-        <attr name="csv_multi_select" format="boolean" />
+        <attr name="pgsv_multi_select" format="boolean" />
 
-        <attr name="csv_show_title">
+        <attr name="pgsv_show_title">
             <enum name="visiable" value="0" />
             <enum name="invisiable" value="1" />
             <enum name="gone" value="2" />
         </attr>
-        <attr name="csv_orientation">
+        <attr name="pgsv_orientation">
             <enum name="horizontal" value="0" />
             <enum name="vertical" value="1" />
         </attr>
-        <attr name="csv_title_gravity">
+        <attr name="pgsv_title_gravity">
             <flag name="top" value="0x30" />
             <flag name="bottom" value="0x50" />
             <flag name="left" value="0x03" />
@@ -487,7 +486,7 @@
         </attr>
     </declare-styleable>
     <!--    自定义flexbox-->
-    <declare-styleable name="MyFlexBoxView">
+    <declare-styleable name="PanguFlexBoxView">
         <attr name="flex_direction">
             <enum name="row" value="0" />
             <enum name="row_reverse" value="1" />

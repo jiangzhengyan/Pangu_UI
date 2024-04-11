@@ -32,7 +32,22 @@
             android:textStyle="bold" />
 
         <View style="@style/gray_horizontal_line_view" />
+        <Button
+            android:id="@+id/btn3"
+            style="@style/style_main_item"
+            android:layout_width="match_parent"
+            android:gravity="start|center_vertical"
+            android:text="盘古选择栏"
+            android:textStyle="bold" />
+
+        <View style="@style/gray_horizontal_line_view" />
 
     </LinearLayout>
+    <com.smart.pangu_ui_lib.widget.PanguFlexBoxView
+        android:id="@+id/mflex_multi_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+      />
 
 </LinearLayout>

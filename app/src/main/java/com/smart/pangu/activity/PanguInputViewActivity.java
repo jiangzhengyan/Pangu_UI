@@ -41,13 +41,13 @@ public class PanguInputViewActivity extends BaseActivity {
         mPiv1.setOnRightClick(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PanguInputViewActivity.this, "点击", Toast.LENGTH_SHORT).show();
+                showToast("点击");
             }
         });
         mPiv3.setOnRBClick(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PanguInputViewActivity.this, "点击", Toast.LENGTH_SHORT).show();
+                showToast("点击....");
             }
         });
     }

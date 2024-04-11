@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_flex_bg"
+        android:button="@null"
+        android:checked="false"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:paddingTop="4dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="4dp"
+        android:text="选项1"
+        android:textColor="@color/flex_item_text_color"
+        android:textSize="12sp" />
+
+    <com.smart.pangu_ui_lib.widget.PanguInputView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:pgiv_hint="请填写"
+        app:pgiv_show_title="gone" />
+
+</LinearLayout>

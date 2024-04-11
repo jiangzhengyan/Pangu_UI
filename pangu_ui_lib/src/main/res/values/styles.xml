@@ -10,6 +10,7 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
+
     <style name="gray_horizontal_line_view">
         <item name="android:background">@color/gray_line_color</item>
         <item name="android:layout_width">match_parent</item>
@@ -27,5 +28,17 @@
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:src">@mipmap/icon_arrow_down</item>
     </style>
-
+    <!--    pop动画style-->
+    <style name="PopAnim_bottom_in_out">
+        <item name="android:windowEnterAnimation">@anim/pop_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pop_slide_out_bottom</item>
+    </style>
+    <style name="PopAnim_top_in_out">
+        <item name="android:windowEnterAnimation">@anim/pop_slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/pop_slide_out_top</item>
+    </style>
+    <style name="PopAnim_scale_in_out">
+        <item name="android:windowEnterAnimation">@anim/pop_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_scale_out</item>
+    </style>
 </resources>

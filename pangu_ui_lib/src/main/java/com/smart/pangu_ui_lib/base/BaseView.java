@@ -2,10 +2,12 @@ package com.smart.pangu_ui_lib.base;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 
 import com.smart.pangu_ui_lib.R;
@@ -21,6 +23,7 @@ public abstract class BaseView extends FrameLayout {
     protected View mContentView;
     protected Context mContext;
     private Dialog loadingDialog;
+
 
     public BaseView(Context context) {
         this(context, null);
@@ -42,9 +45,12 @@ public abstract class BaseView extends FrameLayout {
         //水平显示时候,如果宽度过宽,需要子类重新设置布局宽度(WRAP_CONTENT或者自定义宽度)
         LayoutParams params = new LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         this.setLayoutParams(params);
+        initView(context, attrs, defStyleAttr);
     }
 
     protected abstract int getLayoutId();
+
+    protected abstract void initView(Context context, AttributeSet attrs, int defStyleAttr);
 
     public void showLoading() {
 
@@ -70,10 +76,16 @@ public abstract class BaseView extends FrameLayout {
 
     /**
      * 自定义定义点击监听
+     *
      * @param onCustomClickListener
      */
     public void setOnCustomClickListener(OnClickListener onCustomClickListener) {
         this.onCustomClickListener = onCustomClickListener;
     }
-
+    public void showToast(String msg) {
+        if (TextUtils.isEmpty(msg)) {
+            return;
+        }
+        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
+    }
 }
