@@ -11,12 +11,12 @@ import com.smart.pangu_ui_lib.widget.wheelview.view.WheelView;
  * @author  jiangzhengyan  2024/4/10 9:54
  *
  */
-public final class LoopViewGestureListener extends android.view.GestureDetector.SimpleOnGestureListener {
+public final class WheelViewGestureListener extends android.view.GestureDetector.SimpleOnGestureListener {
 
     private final WheelView wheelView;
 
 
-    public LoopViewGestureListener(WheelView wheelView) {
+    public WheelViewGestureListener(WheelView wheelView) {
         this.wheelView = wheelView;
     }
 

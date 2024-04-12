@@ -1,6 +1,6 @@
 package com.smart.pangu_ui_lib.entity;
 
-import com.smart.pangu_ui_lib.widget.wheelview.interfaces.IPickerViewData;
+import com.smart.pangu_ui_lib.widget.wheelview.interfaces.PickerViewData;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author jiangzhengyan  2024/4/10 9:25
  */
-public class SelectItem implements IPickerViewData {
+public class SelectItem implements PickerViewData {
 
     private String id;
     private String type;

@@ -19,8 +19,8 @@ import android.view.View;
 
 import com.smart.pangu_ui_lib.R;
 import com.smart.pangu_ui_lib.widget.wheelview.adapter.WheelAdapter;
-import com.smart.pangu_ui_lib.widget.wheelview.interfaces.IPickerViewData;
-import com.smart.pangu_ui_lib.widget.wheelview.listener.LoopViewGestureListener;
+import com.smart.pangu_ui_lib.widget.wheelview.interfaces.PickerViewData;
+import com.smart.pangu_ui_lib.widget.wheelview.listener.WheelViewGestureListener;
 import com.smart.pangu_ui_lib.widget.wheelview.listener.OnItemSelectedListener;
 import com.smart.pangu_ui_lib.widget.wheelview.timer.InertiaTimerTask;
 import com.smart.pangu_ui_lib.widget.wheelview.timer.MessageHandler;
@@ -180,7 +180,7 @@ public class WheelView extends View {
     private void initLoopView(Context context) {
         this.context = context;
         handler = new MessageHandler(this);
-        gestureDetector = new GestureDetector(context, new LoopViewGestureListener(this));
+        gestureDetector = new GestureDetector(context, new WheelViewGestureListener(this));
         gestureDetector.setIsLongpressEnabled(false);
         isLoop = true;
 
@@ -618,8 +618,8 @@ public class WheelView extends View {
     private String getContentText(Object item) {
         if (item == null) {
             return "";
-        } else if (item instanceof IPickerViewData) {
-            return ((IPickerViewData) item).getPickerViewText();
+        } else if (item instanceof PickerViewData) {
+            return ((PickerViewData) item).getPickerViewText();
         } else if (item instanceof Integer) {
             //如果为整形则最少保留两位数.
             return getFixNum((int) item);

@@ -28,6 +28,7 @@
         <activity android:name=".activity.PanguNavActivity"/>
         <activity android:name=".activity.PanguSelectViewActivity"/>
         <activity android:name=".activity.PanguPopActivity"/>
+        <activity android:name=".activity.WheelViewActivity"/>
     </application>
 
 </manifest>

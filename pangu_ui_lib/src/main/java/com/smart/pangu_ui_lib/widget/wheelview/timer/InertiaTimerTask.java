@@ -31,7 +31,6 @@ public final class InertiaTimerTask extends TimerTask {
     @Override
     public final void run() {
 
-        //防止闪动，对速度做一个限制。
         if (mCurrentVelocityY == Integer.MAX_VALUE) {
             if (Math.abs(mFirstVelocityY) > 2000F) {
                 mCurrentVelocityY = mFirstVelocityY > 0 ? 2000F : -2000F;
@@ -40,7 +39,6 @@ public final class InertiaTimerTask extends TimerTask {
             }
         }
 
-        //发送handler消息 处理平顺停止滚动逻辑
         if (Math.abs(mCurrentVelocityY) >= 0.0F && Math.abs(mCurrentVelocityY) <= 20F) {
             mWheelView.cancelFuture();
             mWheelView.getHandler().sendEmptyMessage(MessageHandler.WHAT_SMOOTH_SCROLL);
@@ -73,8 +71,6 @@ public final class InertiaTimerTask extends TimerTask {
         } else {
             mCurrentVelocityY = mCurrentVelocityY - 20F;
         }
-
-        //刷新UI
         mWheelView.getHandler().sendEmptyMessage(MessageHandler.WHAT_INVALIDATE_LOOP_VIEW);
     }
 }
