@@ -25,18 +25,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
  *
  * @author jiangzhengyan  2024/4/10 10:12
  */
-public class PopMultiSelectPangu extends PanguBasePop {
+public class PopMultiSelect extends PanguBasePop {
 
 
     private TextView mTvCancel;
     private TextView mTvTitle;
     private TextView mTvSure;
     private PanguRecyclerView mRecycleItem;
-    private LinearLayout mLlContainer;
-    private LinearLayout mLlPopRoot;
 
 
-    public PopMultiSelectPangu(Context context) {
+
+    public PopMultiSelect(Context context) {
         super(context);
     }
 
@@ -51,8 +50,6 @@ public class PopMultiSelectPangu extends PanguBasePop {
         mTvTitle = layout.findViewById(R.id.tv_title);
         mTvSure = layout.findViewById(R.id.tv_sure);
         mRecycleItem = layout.findViewById(R.id.recycle_item);
-        mLlContainer = layout.findViewById(R.id.ll_container);
-        mLlPopRoot = layout.findViewById(R.id.ll_pop_root);
         mTvCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

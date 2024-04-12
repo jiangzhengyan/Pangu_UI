@@ -2,7 +2,6 @@ package com.smart.pangu_ui_lib.pop;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smart.pangu_ui_lib.R;
@@ -20,17 +19,13 @@ import java.util.List;
  *
  * @author jiangzhengyan  2024/4/10 9:49
  */
-public class PopSelectPangu extends PanguBasePop {
+public class PopSelect extends PanguBasePop {
     private TextView mTvCancel;
     private TextView mTvSure;
-    private WheelView mWvYear;
-    private LinearLayout mLlContainer;
-
-
+    private WheelView mWvData;
     private SelectItem selectItem;
 
-
-    public PopSelectPangu(Context context) {
+    public PopSelect(Context context) {
         super(context);
     }
 
@@ -43,8 +38,7 @@ public class PopSelectPangu extends PanguBasePop {
     public void initData(View layout, Context context) {
         mTvCancel = layout.findViewById(R.id.tv_cancel);
         mTvSure = layout.findViewById(R.id.tv_sure);
-        mWvYear = layout.findViewById(R.id.wv_year);
-        mLlContainer = layout.findViewById(R.id.ll_container);
+        mWvData = layout.findViewById(R.id.wv_data);
         //动画
         setAnimaType(AnimaType.BOTTOM_IN_OUT);
         mTvCancel.setOnClickListener(new View.OnClickListener() {
@@ -72,15 +66,13 @@ public class PopSelectPangu extends PanguBasePop {
     public void setData(List<SelectItem> items) {
 
         this.selectItem = items.get(0);
-        mWvYear.setAdapter(new BaseWheelAdapter<SelectItem>(items));
-        mWvYear.setCurrentItem(0);
-        mWvYear.setCyclic(false);
-        mWvYear.setOnItemSelectedListener(new OnItemSelectedListener() {
+        mWvData.setAdapter(new BaseWheelAdapter<SelectItem>(items));
+        mWvData.setCurrentItem(0);
+        mWvData.setCyclic(false);
+        mWvData.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(int index, Object item) {
-
                 selectItem = (SelectItem) item;
-
             }
 
         });

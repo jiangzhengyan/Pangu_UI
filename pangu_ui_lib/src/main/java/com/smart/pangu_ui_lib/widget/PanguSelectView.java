@@ -18,8 +18,8 @@ import android.widget.TextView;
 import com.smart.pangu_ui_lib.R;
 import com.smart.pangu_ui_lib.base.BaseView;
 import com.smart.pangu_ui_lib.entity.SelectItem;
-import com.smart.pangu_ui_lib.pop.PopMultiSelectPangu;
-import com.smart.pangu_ui_lib.pop.PopSelectPangu;
+import com.smart.pangu_ui_lib.pop.PopMultiSelect;
+import com.smart.pangu_ui_lib.pop.PopSelect;
 import com.smart.pangu_ui_lib.util.PhoneHelper;
 
 import java.util.ArrayList;
@@ -341,7 +341,7 @@ public class PanguSelectView extends BaseView {
         }
 
         if (!multiSelect) {
-            PopSelectPangu popSelect = new PopSelectPangu(getContext());
+            PopSelect popSelect = new PopSelect(getContext());
             popSelect.setData(items);
             popSelect.setOnClickSureListener(new View.OnClickListener() {
                 @Override
@@ -359,7 +359,7 @@ public class PanguSelectView extends BaseView {
         }
 
         //多选弹窗
-        PopMultiSelectPangu popMultiSelect = new PopMultiSelectPangu(getContext());
+        PopMultiSelect popMultiSelect = new PopMultiSelect(getContext());
         popMultiSelect.setData(items);
         popMultiSelect.setOnClickSureListener(new View.OnClickListener() {
             @Override
