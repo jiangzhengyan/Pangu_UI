@@ -23,8 +23,9 @@
     <com.smart.pangu_ui_lib.widget.PanguInputView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:layout_marginTop="6dp"
         app:pgiv_hint="请填写"
+        android:visibility="gone"
         app:pgiv_show_title="gone" />
 
 </LinearLayout>

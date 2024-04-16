@@ -3,27 +3,33 @@ package com.smart.pangu;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
+import com.smart.pangu.activity.PanguFlexboxActivity;
 import com.smart.pangu.activity.PanguInputViewActivity;
 import com.smart.pangu.activity.PanguNavActivity;
 import com.smart.pangu.activity.PanguPopActivity;
 import com.smart.pangu.activity.PanguSelectViewActivity;
 import com.smart.pangu.activity.WheelViewActivity;
 import com.smart.pangu.base.BaseActivity;
-import com.smart.pangu_ui_lib.widget.PanguNavBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity {
 
 
-    @Bind(R.id.btn1)
-    Button mBtn1;
-    @Bind(R.id.btn2)
-    Button mBtn2;
+    @Bind(R.id.ll_item)
+    LinearLayout mLlItem;
+    private String[] mainItemArr = {
+            "盘古输入框"
+            , "盘古导航栏"
+            , "盘古选择栏"
+            , "盘古basePop弹窗"
+            , "滚轮控件-WheelView"
+            , "盘古flexbox盒子布局"
+    };
 
     @Override
     protected int getContentViewId() {
@@ -38,31 +44,52 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void loadData() {
 
+        for (String arr : mainItemArr) {
+
+            View itemView = View.inflate(this, R.layout.main_item_view, null);
+            Button btn = itemView.findViewById(R.id.btn);
+            btn.setText(arr);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (arr.equals(mainItemArr[0])) {
+                        //盘古输入框
+                        PanguInputViewActivity.start(MainActivity.this);
+                    }
+                    if (arr.equals(mainItemArr[1])) {
+                        //盘古导航栏
+                        PanguNavActivity.start(MainActivity.this);
+                    }
+                    if (arr.equals(mainItemArr[2])) {
+                        //盘古选择栏
+                        PanguSelectViewActivity.start(MainActivity.this);
+                    }
+                    if (arr.equals(mainItemArr[3])) {
+                        //盘古basePop弹窗
+                        PanguPopActivity.start(MainActivity.this);
+                    }
+                    if (arr.equals(mainItemArr[4])) {
+                        //滚动布局,轮子滚动控件
+                        WheelViewActivity.start(MainActivity.this);
+                    }
+                    if (arr.equals(mainItemArr[5])) {
+                        //盘古flexbox盒子布局
+                        PanguFlexboxActivity.start(MainActivity.this);
+                    }
+
+
+                }
+            });
+
+            mLlItem.addView(itemView);
+        }
+
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn1:
-                //盘古输入框
-                PanguInputViewActivity.start(this);
-                break;
-            case R.id.btn2:
-                //盘古导航栏
-                PanguNavActivity.start(this);
-                break;
-            case R.id.btn3:
-                //盘古选择栏
-                PanguSelectViewActivity.start(this);
-                break;
-            case R.id.btn4:
-                //盘古basePop弹窗
-                PanguPopActivity.start(this);
-                break;
-            case R.id.btn5:
-                //滚动布局,轮子滚动控件
-                WheelViewActivity.start(this);
-                break;
-        }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ButterKnife.bind(this);
     }
 }

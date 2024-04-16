@@ -133,6 +133,7 @@ public class PanguFlexBoxView extends BaseView {
             return;
         }
         civi.setVisibility(isShow ? VISIBLE : GONE);
+
     }
 
 
@@ -206,6 +207,15 @@ public class PanguFlexBoxView extends BaseView {
     }
 
     //******************Text************************//
+
+    /**
+     * 展示普通文本item,可自定义item布局,默认 R.layout.item_flex_box_text
+     *
+     * @param list
+     */
+    public void setDataText(List<SelectItem> list, OnItemClickListener listener) {
+        setDataText(list, R.layout.item_flex_box_text, listener);
+    }
 
     /**
      * 展示普通文本item,可自定义item布局,默认 R.layout.item_flex_box_text
@@ -306,7 +316,7 @@ public class PanguFlexBoxView extends BaseView {
             childCb.setText(name);
             int finalI = i;
 
-            childCiv.setVisibility(showInput ? VISIBLE : GONE);
+            childCiv.setVisibility(checked && showInput ? VISIBLE : GONE);
             //输入框的监听
             childCiv.setEditText(inputContent);
             childCiv.setHint(inputHint);
@@ -387,7 +397,13 @@ public class PanguFlexBoxView extends BaseView {
                         }
 
                     }
-
+                    //输入框的处理
+                    for (int j = 0; j < list.size(); j++) {
+                        LinearLayout childAt = (LinearLayout) mFlexRoot.getChildAt(j);
+                        CheckBox child = (CheckBox) childAt.getChildAt(0);
+                        PanguInputView childCiv = (PanguInputView) childAt.getChildAt(1);
+                        childCiv.setVisibility(child.isChecked() && list.get(j).isShowInput() ? VISIBLE : GONE);
+                    }
                     //最后的状态
                     if (itemCheckListener != null) {
                         itemCheckListener.onItemCheck(selectItem, finalI, childCb.isChecked());
@@ -468,7 +484,7 @@ public class PanguFlexBoxView extends BaseView {
             childCb.setText(name);
             int finalI = i;
 
-            childCiv.setVisibility(showInput ? VISIBLE : GONE);
+            childCiv.setVisibility(checked && showInput ? VISIBLE : GONE);
             //输入框的监听
             childCiv.setEditText(inputContent);
             childCiv.setHint(inputHint);
@@ -503,32 +519,42 @@ public class PanguFlexBoxView extends BaseView {
                 @Override
                 public void onClick(View v) {
                     //先相应checke,再响应点击
-                    //点击后的状态
-                    boolean isChecked = childCb.isChecked();
+                    //点击后获取大到原来的状态
+                    boolean isChecked = selectItem.isCheckedDefault();
 
                     if (mSelectMode == PanguFlexSelectMode.SINGLE) {
                         for (int j = 0; j < list.size(); j++) {
                             LinearLayout childAt = (LinearLayout) mFlexRoot.getChildAt(j);
                             RadioButton child = (RadioButton) childAt.getChildAt(0);
                             child.setChecked(finalI == j);
+                            selectItem.setCheckedDefault(finalI == j);
                         }
                     }
                     //最多只能选中一个
                     if (mSelectMode == PanguFlexSelectMode.ONE_MOST) {
+                        //原来选中了
+                        //取消当前选中
 
-                        for (int j = 0; j < list.size(); j++) {
-                            LinearLayout childAt = (LinearLayout) mFlexRoot.getChildAt(j);
-                            RadioButton child = (RadioButton) childAt.getChildAt(0);
-                            if (isChecked) {
-                                if (finalI != j) {
-                                    child.setChecked(false);
-                                }
+                        //原来未选中
+                        //当前选中,取消其他
+                        if (isChecked) {
+                            childCb.setChecked(false);
+                            selectItem.setCheckedDefault(false);
+                        } else {
+                            for (int j = 0; j < list.size(); j++) {
+                                LinearLayout childAt = (LinearLayout) mFlexRoot.getChildAt(j);
+                                RadioButton child = (RadioButton) childAt.getChildAt(0);
+
+                                child.setChecked(finalI == j);
+                                list.get(j).setCheckedDefault(finalI == j);
                             }
                         }
                     }
                     //至少选中一个
                     if (mSelectMode == PanguFlexSelectMode.ONE_LEAST) {
-                        //之前是选中状态,剩余有选中的,此按钮正常变为为选中;剩余没有选中的,此按钮不变状态,即为选中
+                        //之前是选中状态,
+                        // 1,剩余有选中的,此按钮变为未选中;
+                        // 2,剩余没有选中的,此按钮不变状态,即为选中
                         //之前是未选中状态,正常选中
                         boolean isOtherChecked = false;
                         for (int j = 0; j < list.size(); j++) {
@@ -540,14 +566,29 @@ public class PanguFlexBoxView extends BaseView {
                                 break;
                             }
                         }
-                        if (!isChecked) {
-                            if (!isOtherChecked) {
-                                childCb.setChecked(true);
+                        if (isChecked) {
+                            if (isOtherChecked) {
+                                childCb.setChecked(false);
+                                selectItem.setCheckedDefault(false);
                             }
+                        } else {
+                            childCb.setChecked(true);
+                            selectItem.setCheckedDefault(true);
                         }
-
+                    }
+                    //多选
+                    if (mSelectMode == PanguFlexSelectMode.MULTIPLE) {
+                        childCb.setChecked(!isChecked);
+                        selectItem.setCheckedDefault(!isChecked);
                     }
 
+                    //输入框的处理
+                    for (int j = 0; j < list.size(); j++) {
+                        LinearLayout childAt = (LinearLayout) mFlexRoot.getChildAt(j);
+                        RadioButton child = (RadioButton) childAt.getChildAt(0);
+                        PanguInputView childCiv = (PanguInputView) childAt.getChildAt(1);
+                        childCiv.setVisibility(list.get(j).isCheckedDefault() && list.get(j).isShowInput() ? VISIBLE : GONE);
+                    }
                     //最后的状态
                     if (itemCheckListener != null) {
                         itemCheckListener.onItemCheck(selectItem, finalI, childCb.isChecked());

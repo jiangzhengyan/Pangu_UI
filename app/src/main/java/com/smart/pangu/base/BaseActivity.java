@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends FragmentActivity {
     protected PanguNavBar mPanguNavBar;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +88,11 @@ public abstract class BaseActivity extends FragmentActivity {
         if (TextUtils.isEmpty(msg)) {
             return;
         }
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        if (toast != null) {
+            toast.cancel();
+        }
+        toast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     @Override

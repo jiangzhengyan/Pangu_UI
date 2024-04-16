@@ -23,6 +23,7 @@ public abstract class BaseView extends FrameLayout {
     protected View mContentView;
     protected Context mContext;
     private Dialog loadingDialog;
+    private Toast toast;
 
 
     public BaseView(Context context) {
@@ -82,10 +83,15 @@ public abstract class BaseView extends FrameLayout {
     public void setOnCustomClickListener(OnClickListener onCustomClickListener) {
         this.onCustomClickListener = onCustomClickListener;
     }
+
     public void showToast(String msg) {
         if (TextUtils.isEmpty(msg)) {
             return;
         }
-        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
+        if (toast != null) {
+            toast.cancel();
+        }
+        toast = Toast.makeText(mContext, msg, Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.smart.pangu.R;
+import com.smart.pangu.UserUtil;
 import com.smart.pangu.base.BaseActivity;
 import com.smart.pangu_ui_lib.entity.SelectItem;
 import com.smart.pangu_ui_lib.widget.PanguSelectView;
@@ -41,17 +42,8 @@ public class PanguSelectViewActivity extends BaseActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
 
-        ArrayList<SelectItem> selectItems=new ArrayList<>();
-        selectItems.add(new SelectItem("1","Android"));
-        selectItems.add(new SelectItem("2","Java"));
-        selectItems.add(new SelectItem("3","Php"));
-        selectItems.add(new SelectItem("4",".net"));
-        selectItems.add(new SelectItem("5","H5"));
-        selectItems.add(new SelectItem("6","C++"));
-        selectItems.add(new SelectItem("7","JavaScript"));
-        selectItems.add(new SelectItem("8","Python"));
-        mPsv1.setData(selectItems);
-        mPsv2.setData(selectItems);
+        mPsv1.setData(UserUtil.getSelectItems());
+        mPsv2.setData(UserUtil.getSelectItems());
     }
 
     @Override

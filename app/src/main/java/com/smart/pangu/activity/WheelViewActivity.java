@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.smart.pangu.R;
+import com.smart.pangu.UserUtil;
 import com.smart.pangu.base.BaseActivity;
 import com.smart.pangu_ui_lib.entity.SelectItem;
 import com.smart.pangu_ui_lib.widget.wheelview.adapter.BaseWheelAdapter;
@@ -43,17 +44,7 @@ public class WheelViewActivity extends BaseActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
 
-        ArrayList<SelectItem> selectItems = new ArrayList<>();
-        selectItems.add(new SelectItem("1", "Android"));
-        selectItems.add(new SelectItem("2", "Java"));
-        selectItems.add(new SelectItem("3", "Php"));
-        selectItems.add(new SelectItem("4", ".net"));
-        selectItems.add(new SelectItem("5", "H5"));
-        selectItems.add(new SelectItem("6", "C++"));
-        selectItems.add(new SelectItem("7", "JavaScript"));
-        selectItems.add(new SelectItem("8", "Python"));
-
-        mWv.setAdapter(new BaseWheelAdapter<SelectItem>(selectItems));
+        mWv.setAdapter(new BaseWheelAdapter<SelectItem>(UserUtil.getSelectItems()));
         mWv.setCurrentItem(0);//默认停留的选项
         mWv.setCyclic(true);//是否循环
         mWv.setOnItemSelectedListener(new OnItemSelectedListener<SelectItem>() {
@@ -62,7 +53,7 @@ public class WheelViewActivity extends BaseActivity {
                 showToast("当前位置 , " + item.getName());
             }
         });
-        mWv2.setAdapter(new BaseWheelAdapter<SelectItem>(selectItems));
+        mWv2.setAdapter(new BaseWheelAdapter<SelectItem>(UserUtil.getSelectItems()));
         mWv2.setCurrentItem(0);//默认停留的选项
         mWv2.setCyclic(false);//是否循环
         mWv2.setOnItemSelectedListener(new OnItemSelectedListener<SelectItem>() {

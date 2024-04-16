@@ -16,31 +16,11 @@ public class SelectItem implements PickerViewData {
     private String name;
     private String inputContent;
     private String inputHint;
-    private String professionalCode;
     private int imgResources;
     private boolean isCheckedDefault;
     private boolean isShowInput;
     private String value;
     private ArrayList<SelectItem> subItem;
-    private String nameRbacUser;
-    private String idRbacUser;
-
-    public String getNameRbacUser() {
-        return nameRbacUser;
-    }
-
-    public void setNameRbacUser(String nameRbacUser) {
-        this.nameRbacUser = nameRbacUser;
-    }
-
-    public String getIdRbacUser() {
-        return idRbacUser;
-    }
-
-    public void setIdRbacUser(String idRbacUser) {
-        this.idRbacUser = idRbacUser;
-    }
-
 
     private boolean isSelect;
 
@@ -64,13 +44,6 @@ public class SelectItem implements PickerViewData {
         this.name = name;
     }
 
-    public SelectItem(String id, String name, String nameRbacUser, String idRbacUser) {
-        this.id = id;
-        this.name = name;
-        this.idRbacUser = idRbacUser;
-        this.nameRbacUser = nameRbacUser;
-
-    }
 
     public SelectItem(String id, String name, boolean isCheckedDefault) {
         this.id = id;
@@ -123,14 +96,6 @@ public class SelectItem implements PickerViewData {
         this.type = type;
     }
 
-
-    public String getProfessionalCode() {
-        return professionalCode;
-    }
-
-    public void setProfessionalCode(String professionalCode) {
-        this.professionalCode = professionalCode;
-    }
 
     public String getInputHint() {
         return inputHint;
