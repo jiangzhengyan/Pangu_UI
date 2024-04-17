@@ -30,6 +30,7 @@
         <activity android:name=".activity.PanguPopActivity"/>
         <activity android:name=".activity.WheelViewActivity"/>
         <activity android:name=".activity.PanguFlexboxActivity"/>
+        <activity android:name=".activity.PanguRecyclerAdapterActivity"/>
     </application>
 
 </manifest>

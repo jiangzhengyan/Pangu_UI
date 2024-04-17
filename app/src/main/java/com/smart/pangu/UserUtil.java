@@ -13,6 +13,7 @@ public class UserUtil {
         SelectItem android = new SelectItem("1", "Android");
         android.setShowInput(true);
         android.setInputContent("这是安卓....");
+        android.setSelect(true);
         selectItems.add(android);
         selectItems.add(new SelectItem("2", "Java"));
         selectItems.add(new SelectItem("3", "Php"));

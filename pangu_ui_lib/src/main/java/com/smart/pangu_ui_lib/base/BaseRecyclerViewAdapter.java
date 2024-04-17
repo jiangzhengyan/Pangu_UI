@@ -107,7 +107,7 @@ public class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<BaseViewHol
 
 
     /**
-     * 添加数据
+     * 可以追加数据,适用于列表数据的分页,添加数据
      *
      * @param list
      */

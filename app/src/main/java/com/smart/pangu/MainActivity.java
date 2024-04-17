@@ -9,6 +9,7 @@ import com.smart.pangu.activity.PanguFlexboxActivity;
 import com.smart.pangu.activity.PanguInputViewActivity;
 import com.smart.pangu.activity.PanguNavActivity;
 import com.smart.pangu.activity.PanguPopActivity;
+import com.smart.pangu.activity.PanguRecyclerAdapterActivity;
 import com.smart.pangu.activity.PanguSelectViewActivity;
 import com.smart.pangu.activity.WheelViewActivity;
 import com.smart.pangu.base.BaseActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity {
             , "盘古basePop弹窗"
             , "滚轮控件-WheelView"
             , "盘古flexbox盒子布局"
+            , "盘古RecyclerAdapter适配器的使用"
     };
 
     @Override
@@ -75,6 +77,11 @@ public class MainActivity extends BaseActivity {
                     if (arr.equals(mainItemArr[5])) {
                         //盘古flexbox盒子布局
                         PanguFlexboxActivity.start(MainActivity.this);
+                    }
+
+                    if (arr.equals(mainItemArr[6])) {
+                        //盘古RecyclerAdapter适配器的使用
+                        PanguRecyclerAdapterActivity.start(MainActivity.this);
                     }
 
 
