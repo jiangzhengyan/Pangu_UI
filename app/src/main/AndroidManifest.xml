@@ -31,6 +31,7 @@
         <activity android:name=".activity.WheelViewActivity"/>
         <activity android:name=".activity.PanguFlexboxActivity"/>
         <activity android:name=".activity.PanguRecyclerAdapterActivity"/>
+        <activity android:name=".activity.FilePathActivity"/>
     </application>
 
 </manifest>

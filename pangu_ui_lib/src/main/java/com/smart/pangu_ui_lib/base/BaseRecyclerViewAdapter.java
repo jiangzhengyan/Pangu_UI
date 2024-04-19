@@ -40,7 +40,7 @@ public class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<BaseViewHol
         this.list = list;
     }
 
-    public void setmDelegate(Delegate<T> mDelegate) {
+    public void setDelegate(Delegate<T> mDelegate) {
         this.mDelegate = mDelegate;
     }
 
