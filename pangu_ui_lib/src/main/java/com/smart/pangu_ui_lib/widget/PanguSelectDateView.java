@@ -42,6 +42,8 @@ public class PanguSelectDateView extends BaseView {
     private boolean enable;
     private boolean must;
     private int showTitle;
+    private int titleColor;
+    private boolean border;
 
     public PanguSelectDateView(Context context) {
         super(context);
@@ -81,6 +83,11 @@ public class PanguSelectDateView extends BaseView {
         csdate_show_mode = typedArray.getInt(R.styleable.PanguSelectDateView_pgsdate_show_mode, 2);
         //是否显示标题
         showTitle = typedArray.getInt(R.styleable.PanguSelectDateView_pgsdate_show_title, 0);
+        //标题颜色
+        titleColor = typedArray.getInteger(R.styleable.PanguSelectDateView_pgsdate_title_color, getResources().getColor(R.color.main_subtitle_color));
+
+        //边框
+        border = typedArray.getBoolean(R.styleable.PanguSelectDateView_pgsdate_border, true);
         typedArray.recycle();
 
         init();
@@ -113,9 +120,21 @@ public class PanguSelectDateView extends BaseView {
         setTitle(title);
         setEnable(enable);
         setTitleVisibility(showTitle);
+        setTitleColor(titleColor);
+        setBorder(border);
+
     }
-
-
+    public void setTitleColor(int titleColor) {
+        mCsvStartDate.setTitleColor(titleColor);
+    }
+    /**
+     * 设置输入框的边框  true :设置边框
+     */
+    private void setBorder(boolean border) {
+        this.border = border;
+        mCsvStartDate.setBorder(border);
+        mCsvEndDate.setBorder(border);
+    }
     /**
      * 设置布局宽高
      *
