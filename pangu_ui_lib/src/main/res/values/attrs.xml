@@ -466,8 +466,8 @@
 
         <attr name="pgsv_show_title">
             <enum name="visiable" value="0" />
-            <enum name="invisiable" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="invisiable" value="4" />
+            <enum name="gone" value="8" />
         </attr>
         <attr name="pgsv_orientation">
             <enum name="horizontal" value="0" />
@@ -711,35 +711,39 @@
 
     </declare-styleable>
     <!--    选择日期控件-->
-    <declare-styleable name="CustomSelectDateView">
-        <attr name="csdate_select_mode">
-            <!--            年-->
+    <declare-styleable name="PanguSelectDateView">
+        <attr name="pgsdate_select_mode">
+            <!--年-->
             <enum name="yyyy" value="0" />
-            <!--            年月日-->
+            <!--年月日-->
             <enum name="yyyy_MM_dd" value="1" />
-            <!--            年月日时分-->
+            <!--年月日时分-->
             <enum name="yyyy_MM_dd_HH_mm" value="2" />
-            <!--            月日-->
+            <!--月日-->
             <enum name="MM_dd" value="3" />
+            <!--时分-->
+            <enum name="HH_mm" value="4" />
+            <!--年月日时分秒-->
+            <enum name="yyyy_MM_dd_HH_mm_ss" value="5" />
         </attr>
-        <attr name="csdate_show_mode">
+        <attr name="pgsdate_show_mode">
             <!--显示一个日期-->
             <enum name="singleDate" value="1" />
             <!--显示两个日期-->
             <enum name="doubleDate" value="2" />
         </attr>
-        <attr name="csdate_title" format="string" />
-        <attr name="csdate_hint_start" format="string" />
-        <attr name="csdate_hint_end" format="string" />
-        <attr name="csdate_enable" format="boolean" />
-        <attr name="csdate_must" format="boolean" />
-        <attr name="csdate_border" format="boolean" />
-        <attr name="csdate_title_color" format="color" />
+        <attr name="pgsdate_title" format="string" />
+        <attr name="pgsdate_hint_start" format="string" />
+        <attr name="pgsdate_hint_end" format="string" />
+        <attr name="pgsdate_enable" format="boolean" />
+        <attr name="pgsdate_must" format="boolean" />
+        <attr name="pgsdate_border" format="boolean" />
+        <attr name="pgsdate_title_color" format="color" />
 
-        <attr name="csdate_show_title">
+        <attr name="pgsdate_show_title">
             <enum name="visiable" value="0" />
-            <enum name="invisiable" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="invisiable" value="4" />
+            <enum name="gone" value="8" />
         </attr>
     </declare-styleable>
 

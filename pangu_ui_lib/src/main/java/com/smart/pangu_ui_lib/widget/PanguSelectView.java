@@ -51,7 +51,7 @@ public class PanguSelectView extends BaseView {
     private boolean must;
     private boolean showIconRight;
     private int iconRight;
-    private int showTitle;//0 visiable; 1 ,invisiable; 2,gone
+    private int showTitle;// {@link View#VISIBLE}   {@link View#INVISIBLE}   {@link View#GONE}
     private int titleColor;
     private boolean border;//展示输入框的边框
     private boolean showLine;//是否展示下面的线
@@ -251,17 +251,21 @@ public class PanguSelectView extends BaseView {
     /**
      * 是否显示标题
      *
-     * @param visibility //0 visiable; 1 ,invisiable; 2,gone
+     * @param visibility //  {@link View#VISIBLE}   {@link View#INVISIBLE}   {@link View#GONE}
      */
     public void setTitleVisibility(int visibility) {
+        this.showTitle = visibility;
         if (mTvName != null) {
-            mTvName.setVisibility(visibility == 0 ? VISIBLE : visibility == 1 ? INVISIBLE : GONE);
+            mTvName.setVisibility(visibility);
         }
+        //必填的UI处理
+        mTvMust.setVisibility(visibility == View.VISIBLE && must ? VISIBLE : GONE);
     }
 
     public void setIsMust(boolean must) {
+        this.must = must;
         if (mTvMust != null) {
-            mTvMust.setVisibility(must ? VISIBLE : GONE);
+            mTvMust.setVisibility(showTitle == View.VISIBLE && must ? VISIBLE : GONE);
         }
     }
 
@@ -286,7 +290,6 @@ public class PanguSelectView extends BaseView {
         this.enable = enable;
         if (mRlSelect != null) {
             mRlSelect.setEnabled(enable);
-            mRlSelect.setClickable(enable);
         }
     }
 
@@ -399,7 +402,8 @@ public class PanguSelectView extends BaseView {
     }
 
     /**
-     *  设置弹窗数据(带默认值)
+     * 设置弹窗数据(带默认值)
+     *
      * @param value
      * @param key
      * @param items

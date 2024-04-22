@@ -32,6 +32,7 @@
         <activity android:name=".activity.PanguFlexboxActivity"/>
         <activity android:name=".activity.PanguRecyclerAdapterActivity"/>
         <activity android:name=".activity.FilePathActivity"/>
+        <activity android:name=".activity.DateSelectActivity"/>
     </application>
 
 </manifest>

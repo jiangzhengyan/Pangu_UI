@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.smart.pangu.activity.DateSelectActivity;
 import com.smart.pangu.activity.FilePathActivity;
 import com.smart.pangu.activity.PanguFlexboxActivity;
 import com.smart.pangu.activity.PanguInputViewActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends BaseActivity {
             , "盘古flexbox盒子布局"
             , "盘古RecyclerAdapter适配器的使用"
             , "文件存储filepathutil"
+            , "时间选择框"
     };
 
     @Override
@@ -88,6 +90,11 @@ public class MainActivity extends BaseActivity {
                     if (arr.equals(mainItemArr[7])) {
                         //文件存储filepathutil
                         FilePathActivity.start(MainActivity.this);
+                    }
+
+                    if (arr.equals(mainItemArr[8])) {
+                        //时间选择框
+                        DateSelectActivity.start(MainActivity.this);
                     }
 
 

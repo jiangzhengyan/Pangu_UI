@@ -41,4 +41,15 @@
         <item name="android:windowEnterAnimation">@anim/pop_scale_in</item>
         <item name="android:windowExitAnimation">@anim/pop_scale_out</item>
     </style>
+    <!--时间选择器-->
+    <style name="style_date_title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#3A3A3A</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">6dp</item>
+
+    </style>
 </resources>

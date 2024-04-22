@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <com.smart.pangu_ui_lib.widget.PanguSelectView
+        android:id="@+id/csv_start_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:pgsv_hint="开始时间"
+        app:pgsv_orientation="vertical"
+        app:pgsv_border="true"
+        app:pgsv_icon_right="@mipmap/icon_calendar"
+        app:pgsv_title="选择时间"
+       />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/image_content_des"
+        android:src="@mipmap/icon_arrow" />
+
+
+    <com.smart.pangu_ui_lib.widget.PanguSelectView
+        android:id="@+id/csv_end_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:pgsv_border="true"
+        android:layout_weight="1"
+        app:pgsv_orientation="vertical"
+        app:pgsv_hint="结束时间"
+        app:pgsv_icon_right="@mipmap/icon_calendar"
+        app:pgsv_show_title="invisiable" />
+</LinearLayout>
+
