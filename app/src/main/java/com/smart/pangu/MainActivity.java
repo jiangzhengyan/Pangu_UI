@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import com.smart.pangu.activity.DateSelectActivity;
 import com.smart.pangu.activity.FilePathActivity;
+import com.smart.pangu.activity.FormTitleActivity;
 import com.smart.pangu.activity.PanguFlexboxActivity;
 import com.smart.pangu.activity.PanguInputViewActivity;
 import com.smart.pangu.activity.PanguNavActivity;
@@ -35,11 +36,12 @@ public class MainActivity extends BaseActivity {
             , "盘古RecyclerAdapter适配器的使用"
             , "文件存储filepathutil"
             , "时间选择框"
+            , "详情|表单的小标题"
     };
 
     @Override
     protected int getContentViewId() {
-        return R.layout.activity_main2;
+        return R.layout.activity_main;
     }
 
     @Override
@@ -95,6 +97,11 @@ public class MainActivity extends BaseActivity {
                     if (arr.equals(mainItemArr[8])) {
                         //时间选择框
                         DateSelectActivity.start(MainActivity.this);
+                    }
+
+                    if (arr.equals(mainItemArr[9])) {
+                        //详情|表单的小标题
+                        FormTitleActivity.start(MainActivity.this);
                     }
 
 

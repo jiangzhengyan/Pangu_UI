@@ -33,6 +33,7 @@
         <activity android:name=".activity.PanguRecyclerAdapterActivity"/>
         <activity android:name=".activity.FilePathActivity"/>
         <activity android:name=".activity.DateSelectActivity"/>
+        <activity android:name=".activity.FormTitleActivity"/>
     </application>
 
 </manifest>

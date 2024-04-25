@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.smart.pangu_ui_lib.widget.PanguNavBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pangu_title_mid="详情|表单的小标题" />
+
+    <View style="@style/gray_horizontal_line_view" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="1,没有下划线" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguFormTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pgft_icon_right="@mipmap/ic_arrow_right"
+                app:pgft_mid_title="中间内容"
+                app:pgft_must="true"
+                android:id="@+id/pg_ftitle"
+                app:pgft_show_line="false"
+                app:pgft_show_right_title="visiable"
+                app:pgft_title="标题" />
+            <TextView
+                style="@style/style_sub_item"
+                android:layout_marginTop="18dp"
+                android:text="2,有下划线" />
+
+            <View
+                style="@style/gray_horizontal_line_view"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <com.smart.pangu_ui_lib.widget.PanguFormTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pgft_icon_right="@mipmap/ic_arrow_right"
+                app:pgft_mid_title="中间内容"
+                app:pgft_show_line="true"
+                app:pgft_show_right_title="visiable"
+                app:pgft_title="标题" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

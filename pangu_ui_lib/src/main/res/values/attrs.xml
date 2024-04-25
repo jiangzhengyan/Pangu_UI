@@ -747,31 +747,31 @@
         </attr>
     </declare-styleable>
 
-    <!--    自定义表达展示标题必填非必填-->
-    <declare-styleable name="CustomFormTitle">
-        <attr name="cft_title_size" format="dimension" />
-        <attr name="cft_title_color" format="color" />
+    <!--    自定义表达展示标题-->
+    <declare-styleable name="PanguFormTitle">
+        <attr name="pgft_title_size" format="dimension" />
+        <attr name="pgft_title_color" format="color" />
 
 
-        <attr name="cft_title_text_style">
+        <attr name="pgft_title_text_style">
             <flag name="normal" value="0" />
             <flag name="bold" value="1" />
             <flag name="italic" value="2" />
         </attr>
-        <attr name="cft_title" format="string" />
-        <attr name="cft_padding_start" format="dimension" />
-        <attr name="cft_right_title" format="string" />
-        <attr name="cft_must" format="boolean" />
-        <attr name="cft_show_line" format="boolean" />
-        <attr name="cft_background" format="reference|color" />
-        <attr name="cft_show_right_title">
+        <attr name="pgft_title" format="string" />
+        <attr name="pgft_padding_start" format="dimension" />
+        <attr name="pgft_right_title" format="string" />
+        <attr name="pgft_must" format="boolean" />
+        <attr name="pgft_show_line" format="boolean" />
+        <attr name="pgft_background" format="reference|color" />
+        <attr name="pgft_show_right_title">
             <enum name="visiable" value="0" />
-            <enum name="invisiable" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="invisiable" value="4" />
+            <enum name="gone" value="8" />
         </attr>
-        <attr name="cft_icon_right" format="reference" />
-        <attr name="cft_mid_title" format="string" />
-        <attr name="cft_mid_textColor" format="reference|color" />
+        <attr name="pgft_icon_right" format="reference" />
+        <attr name="pgft_mid_title" format="string" />
+        <attr name="pgft_mid_textColor" format="reference|color" />
 
     </declare-styleable>
 
