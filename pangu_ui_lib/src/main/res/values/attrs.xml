@@ -774,6 +774,12 @@
         <attr name="pgft_mid_textColor" format="reference|color" />
 
     </declare-styleable>
+    <!-- 画板-->
+    <declare-styleable name="PanguDrawBoard">
+
+        <attr name="pgdb_paint_color" format="color" />
+
+    </declare-styleable>
 
     <!--    自定义三种状态checkbox-->
     <declare-styleable name="ThreeStateCheckBox">

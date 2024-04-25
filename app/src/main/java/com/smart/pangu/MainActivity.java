@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.smart.pangu.activity.DateSelectActivity;
+import com.smart.pangu.activity.DrawBoardActivity;
 import com.smart.pangu.activity.FilePathActivity;
 import com.smart.pangu.activity.FormTitleActivity;
 import com.smart.pangu.activity.PanguFlexboxActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends BaseActivity {
             , "文件存储filepathutil"
             , "时间选择框"
             , "详情|表单的小标题"
+            , "手写画板"
     };
 
     @Override
@@ -102,6 +104,11 @@ public class MainActivity extends BaseActivity {
                     if (arr.equals(mainItemArr[9])) {
                         //详情|表单的小标题
                         FormTitleActivity.start(MainActivity.this);
+                    }
+
+                    if (arr.equals(mainItemArr[10])) {
+                        //手写画板
+                        DrawBoardActivity.start(MainActivity.this);
                     }
 
 
